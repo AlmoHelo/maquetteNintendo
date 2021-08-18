@@ -1,0 +1,532 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #f4f4f4;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* DEBUT HEADER */
+header{
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #bf0010;
+    background: #e60012;
+}
+.logo{
+    width: 18vh;
+    padding-left: 20px;
+}
+.menu{
+    height: 100%;
+}
+.menu ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+}
+.menu li{
+    width: 10vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 3px;
+}
+.menu li:hover p{
+    text-decoration: underline;
+}
+.menu a{
+    display: flex;
+    flex-direction: column;
+    font-size: .7143rem;
+}
+.menu i {
+    font-size: 28px;
+    margin: 0 0 8px;
+}
+.menu p {
+    padding: 0 6px;
+    font-size: 11px;
+}
+.ellip{
+    width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* FIN HEADER */
+
+/* DEBUT ASIDE */
+.menuOrdi{
+    width: 88px;
+    height: 100%;
+    margin-top: 10vh;
+    background-color: #bf0010;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    color: #fff;
+}
+aside li{
+    width: 98%;
+    height: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 2px 0;
+    border: 0.1px solid #bf0010;
+    background-color: #e60012;
+}
+aside li:hover{
+    background-color: #bf0010;
+}
+.otherAside{
+    height: 54px;
+}
+.bordAside{
+    border-radius: 0 20px 0 0;
+}
+aside li svg {
+    width: 32px;
+    height: 32px;
+}
+aside li i{
+    color: #fff;
+    margin: 8px;
+    font-size: 20px;
+}
+aside li p {
+    font-size: 13px;
+}
+aside a{
+    width: 2vh;
+    font-size: 14px;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    z-index: 10;
+    top: 85vh;
+    left: 3.5vh;
+}
+aside a i {
+    color: #e60012;
+    margin: 4px 0 2px 0;
+}
+.menuMobile{
+    display: none;
+}
+/* FIN ASIDE */
+.myBody{
+    display: flex;
+    padding-top: 8px;
+    margin-left: 8px;
+}
+/* DEBUT SECTION */
+section{
+    display: flex;
+    width: 65%;
+    overflow: hidden;
+    margin-left: 88px;
+    padding-top: 72px;
+    height: 50%;
+}
+.firstDiv{
+    width: 33%;
+    transition: all 1s cubic-bezier(.165,.84,.44,1);
+}
+.firstDiv:hover img{
+    transform: scale3d(1.01, 1.01, 1.01);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.281);
+}
+.firstDiv img{
+    width: 100%;
+    border-radius: 5px;
+}
+.firstDiv p{
+    position: relative;
+    z-index: 2;
+    bottom: 48px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.541);
+    padding: 15px 0;
+    border-radius: 0 0 5px 5px;
+}
+.blocAll{
+    width: 67%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.secondBloc, .thirdBloc{
+    width: 48%;
+    margin: 0 auto;
+    transition: all 1s cubic-bezier(.165,.84,.44,1);
+}
+.secondBloc:hover img, .thirdBloc:hover img{
+    transform: scale3d(1.01, 1.01, 1.01);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.281);
+}
+.secondBloc img, .thirdBloc img {
+    width: 100%;
+    border-radius: 5px;
+}
+.secondBloc p{
+    position: relative;
+    z-index: 2;
+    bottom: 65px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.541);
+    padding: 15px 0;
+}
+.thirdBloc p{
+    position: relative;
+    z-index: 2;
+    bottom: 58px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.541);
+    padding: 15px 0;
+}
+.fourBloc{
+    width: 98%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 7.6vh;
+    transition: all 1s cubic-bezier(.165,.84,.44,1);
+}
+.fourBloc img{
+    width: 100%;
+    border-radius: 5px;
+}
+.fourBloc:hover img{
+    transform: scale3d(1.01, 1.01, 1.01);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.281);
+}
+/* FIN SECTION */
+
+/*DEBUT ARTICLE*/
+
+article{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 72px;
+    max-height: 100%;
+    margin: 0% 0.2%;
+}
+article h2{
+    font-size: 1.143rem;
+    padding: 15px;
+    margin: 5px 0;
+    font-weight: 700;
+    background-color: #fff;
+}
+article figure{
+    min-height: 140px;
+    display: flex;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #fff;
+}
+article figcaption:hover .page-title{
+    text-decoration: underline;
+}
+article img{
+    width: 112px;
+    height: 112px;
+    margin-right: 10px;
+}
+article p{
+    color: black;
+}
+.page-title{
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.page-data{
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #999999;
+}
+.page-text{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+/*FIN ARTICLE*/
+
+@media screen and (max-width:767px){
+    /*MENU EN VERSION MOBILE*/
+    .menuOrdi{
+        display: none;
+    }
+    .menuMobile {
+        display: flex;
+    }
+    details {
+        margin: 0px;
+    }
+    summary {
+        font-size: 20px;
+        writing-mode: vertical-lr;
+        text-align: center;
+        padding: 5px 5px;
+        width: 23px;
+        height: 17px;
+        background-color: transparent;
+        border-radius: 5px;
+        color: rgba(255, 255, 255, 0.575);
+        cursor: pointer;
+        user-select: none;
+        outline: none;
+        transition: transform 600ms ease-in-out 0s;
+    }
+    summary::before,
+    summary::after {
+        position: static;
+        top: 0;
+        left: 0;
+    }
+    summary::before {
+        content: "";
+    }
+    summary::after {
+        content: "III";
+        letter-spacing: -1px;
+    }
+    summary:hover {
+        transform: scale(1.1);
+    }
+    summary::marker {
+        font-size: 0;
+    }
+    summary::-webkit-details-marker {
+        display: none;
+    }
+    details[open] .menuMob {
+        animation-name: menu_Anim;
+    }
+    details[open] summary::before {
+        content: "X";
+    }
+    details[open] summary::after {
+        content: "";
+    }
+    .listMenuMobile{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 72px;
+        z-index: 5;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+        background-color: #fff;
+    }
+    .listMenuMobile li{
+        width: 88px;
+        height: 106px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+    .otherAside{
+        height: auto;
+    }
+    .listMenuMobile p{
+        color: #fff;
+    }
+
+    /*HEADER*/
+    .panier{
+        display: none!important;
+    }
+    .logo{
+        width: 13vh;
+        padding: 0;
+    }
+    .menu li{
+        margin: 0;
+    }
+
+    /*Section*/
+    .myBody{
+        margin-left: 0;
+        flex-direction: column;
+    }
+    section{
+        width: 98%;
+        margin-left: 0;
+        margin: auto;
+        height: auto;
+        flex-direction: column;
+    }
+    .firstDiv{
+        width: 100%;
+        height: 308px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    .firstDiv p{
+        bottom: 365px;
+    }
+    .blocAll{
+        width: 100%;
+        margin-top: 1vh;
+    }
+    .secondBloc, .thirdBloc{
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .secondBloc p{
+        border-radius: 0 0 5px 5px;
+    }
+    .thirdBloc{
+        position: relative;
+        bottom: 8vh;
+    }
+    .fourBloc{
+        width: 100%;
+        bottom: 13vh;
+    }
+
+    /*Dernier article*/
+    article{
+        width: 96%;
+        padding-top: 0;
+        position: relative;
+        bottom: 13vh;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .myBody{
+        flex-direction: column;
+    }
+    /*section*/
+    section{
+        width: 88%;
+    }
+    .firstDiv{
+        width: 30%;
+        height: 195px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    .firstDiv p{
+        bottom: 260px;
+        padding: 10px 0;
+    }
+    .blocAll{
+        width: 70%;
+    }
+    .secondBloc, .thirdBloc{
+        height: 195px;
+        overflow: hidden;
+    }
+    .secondBloc p{
+        bottom: 95px;
+        padding: 10px 0;
+    }
+    .thirdBloc p{
+        bottom: 85px;
+        padding: 10px 0;
+    }
+    .fourBloc{
+        bottom: 0;
+        top: 5px;
+    }
+
+    /*Debut article*/
+    article{
+        width: 88%;
+        margin-left: 88px;
+        padding-top: 5px;
+    }
+    .myArticle{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .myArticle li {
+        width: 48%;
+        height: 250px;
+        margin: auto;
+        margin-bottom: 5px;
+        background-color: #fff;
+    }
+    article figure{
+        min-height: 140px;
+        display: flex;
+        padding: 8px;
+        margin: 5px 0;
+    }
+    .page-title{
+        font-size: 15px;
+    }
+}
